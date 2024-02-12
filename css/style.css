@@ -17,6 +17,7 @@ body{
 }
 
 .profile-look{
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -27,6 +28,17 @@ body{
     border-radius: 24px;
     padding: 30px;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.profile-look::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 36%;
+    width: 100%;
+    border-radius: 24px 24px 0 0;
+    background-color: #3EE654;
 }
 
 .image {
@@ -79,9 +91,57 @@ body{
     font-size: 18px;
     height: 34px;
     width: 34px;
-    border-radius: 50px;
+    border-radius: 10px;
     margin: 0 8px;
     background-color: #3EE654;
     text-decoration: none;
 }
 
+.profile-look .buttons{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+.buttons .button {
+    color: #fff;
+    font-size: 14px;
+    font-weight: 400;
+    border: none;
+    border-radius: 24px;
+    padding: 8px 24px;
+    margin: 0 10px;
+    background-color: #3EE654;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.buttons .button:hover {
+    background-color: #06421d;
+}
+
+.profile-look .followers{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* gap: 10px; */
+    margin-top: 15px;
+}
+
+.followers .data {
+      display: flex;
+      align-items: center;
+      color: #333; 
+      padding: 0 20px;
+      border-right: 2px solid #e7e7e7;
+}
+
+.data i{
+    font-size: 20px;
+    margin-right: 6px;
+}
+
+.data:last-child {
+    border-right: none;
+}
